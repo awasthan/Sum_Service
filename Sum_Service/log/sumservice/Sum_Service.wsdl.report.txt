@@ -1,0 +1,13 @@
+
+
+Importing file: /home/anandawasthi/IBM/ACET11/workspace2/Sum_Service/Sum_Service.wsdl
+
+The WSDL import will proceed with bindings Sum_ServiceHttpBinding.
+Creating wsdl schema document for platform:/resource/Sum_Service/Sum_Service.wsdl.
+Parsing wsdl binding {http://Sum_Service}Sum_ServiceHttpBinding.
+Parsing wsdl binding input doSum.
+Parsing wsdl binding output doSum.
+Processing doc style for operation doSum.
+Populating WSDL schema Sum_Service.xsd.
+Creating file Sum_Service.xsd in the workspace.
+Copying source WSDL Sum_Service.wsdl to Sum_Service.wsdl.

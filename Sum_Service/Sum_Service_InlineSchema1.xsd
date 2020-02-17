@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Sum_Service" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Sum_Service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <xsd:element ibmSchExtn:docRoot="true" name="doSum">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="doSumRequest">
+              <xsd:complexType>
+               <xsd:sequence>
+                 <xsd:element name="num1" type="xsd:int"></xsd:element>
+                 <xsd:element name="num2" type="xsd:int"></xsd:element>
+               </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element ibmSchExtn:docRoot="true" name="doSumResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="doSumReponse">
+             <xsd:complexType>
+              <xsd:sequence>
+               <xsd:element name="sum" type="xsd:int"></xsd:element>
+              </xsd:sequence>
+             </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>

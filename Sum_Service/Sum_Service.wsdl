@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Sum_Service" targetNamespace="http://Sum_Service" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Sum_Service" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="Sum_ServiceHttpBinding" originalBindingStyle="document"/>
+        <generatedXSD location="Sum_Service_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  
+  <wsdl:types>
+    
+        <xsd:schema targetNamespace="http://Sum_Service" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+      <xsd:include schemaLocation="Sum_Service_InlineSchema1.xsd"/>
+    </xsd:schema>
+    </wsdl:types>
+  <wsdl:message name="doSumRequestMsg">
+    <wsdl:part element="tns:doSum" name="doSumParameters"/>
+  </wsdl:message>
+  <wsdl:message name="doSumResponseMsg">
+    <wsdl:part element="tns:doSumResponse" name="doSumResult"/>
+  </wsdl:message>
+  <wsdl:portType name="Sum_Service">
+    <wsdl:operation name="doSum">
+      <wsdl:input message="tns:doSumRequestMsg" name="doSumRequest"/>
+      <wsdl:output message="tns:doSumResponseMsg" name="doSumResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Sum_ServiceHttpBinding" type="tns:Sum_Service">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="doSum">
+      <soap:operation soapAction="http://Sum_Service/doSum"/>
+      <wsdl:input name="doSumRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="doSumResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    </wsdl:binding>
+  <wsdl:service name="Sum_ServiceHttpService">
+    <wsdl:port binding="tns:Sum_ServiceHttpBinding" name="Sum_ServiceHttpPort">
+      <soap:address location="http://localhost:7800/Sum_Service"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
