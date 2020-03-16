@@ -19,7 +19,7 @@ zip ${JOB_NAME}.zip ${JOB_NAME}_DEV_${BUILD_NUMBER}.bar
 }
 sshagent (credentials: ['jenkins-gihub']) {
     sh("git tag -a ${BUILD_NUMBER} -m 'Jenkins'")
-    sh('git push https://github.com/awasthan/Sum_Service.git --tags')
+    sh('git push git@github.com:awasthan/Sum_Service.git --tags')
 }
 }
 }
