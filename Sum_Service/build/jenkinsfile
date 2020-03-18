@@ -23,5 +23,6 @@ sshagent (credentials: ['jenkins-gihub']) {
     sh('git push git@github.com:awasthan/Sum_Service.git --tags')
 }
 }
+cleanWs()
 }
 }
