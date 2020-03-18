@@ -7,7 +7,7 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Sum_Service/icons/full/obj16/Sum_Service.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Sum_Service/icons/full/obj30/Sum_Service.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmSOAPInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="20,100" wsdlFileName="Sum_Service.wsdl" selectedPortType="Sum_Service" selectedBinding="Sum_ServiceHttpBinding" selectedPort="Sum_ServiceHttpPort" targetNamespace="http://Sum_Service" useHTTPTransport="true" useHTTPS="true" urlSelector="/Sum_Service" allowQueryWSDL="true" extractSOAPBody="true">
+      <nodes xmi:type="ComIbmSOAPInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="20,100" wsdlFileName="Sum_Service.wsdl" selectedPortType="Sum_Service" selectedBinding="Sum_ServiceHttpBinding" selectedPort="Sum_ServiceHttpPort" targetNamespace="http://Sum_Service" useHTTPTransport="true" urlSelector="/Sum_Service" allowQueryWSDL="true" extractSOAPBody="true">
         <translation xmi:type="utility:ConstantString" string="SOAP Input"/>
       </nodes>
       <nodes xmi:type="ComIbmRouteToLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="220,230">
