@@ -7,6 +7,17 @@ CREATE COMPUTE MODULE doSum_Request_Response_Compute
 	BEGIN
 		
 		SET OutputRoot.XMLNSC.ns:doSumResponse.doSumReponse.sum = InputRoot.XMLNSC.ns:doSum.doSumRequest.num1 + InputRoot.XMLNSC.ns:doSum.doSumRequest.num2;
+		
+		DECLARE i,j,k INTEGER 0;
+		SET j = 1;
+		SET k = 1;
+		WHILE i < 10000000 DO
+			SET j = j + k;
+			SET k = j - k;
+			SET j = k;
+			SET i = i + 1;
+		END WHILE;
+		
 		RETURN TRUE;
 	END;
 
